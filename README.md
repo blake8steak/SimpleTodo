@@ -32,7 +32,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-First Android app I've every built using Android Studio, pretty simple and straightforward. Looking forward to building more stuff soon!
+First Android app I've ever built using Android Studio, pretty simple and straightforward. Looking forward to building more stuff soon!
 
 ## License
 
