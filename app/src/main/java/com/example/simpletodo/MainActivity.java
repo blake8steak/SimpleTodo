@@ -74,16 +74,20 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String todoItem = etItem.getText().toString();
-                //add to model (push to list)
-                items.add(todoItem);
-                // notify adapter of insertion (update screen)
-                itemsAdapter.notifyItemInserted(items.size()-1);
-                //clear text
-                etItem.setText("");
-                //toast!
-                Toast.makeText(getApplicationContext(), "Added to list", Toast.LENGTH_SHORT).show();
-                writeItems();
+                if(etItem.getText().toString().length() > 0) {
+                    String todoItem = etItem.getText().toString();
+                    //add to model (push to list)
+                    items.add(todoItem);
+                    // notify adapter of insertion (update screen)
+                    itemsAdapter.notifyItemInserted(items.size() - 1);
+                    //clear text
+                    etItem.setText("");
+                    //toast!
+                    Toast.makeText(getApplicationContext(), "Added to list", Toast.LENGTH_SHORT).show();
+                    writeItems();
+                } else {
+                    Toast.makeText(MainActivity.this, "Please enter at least 1 character.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

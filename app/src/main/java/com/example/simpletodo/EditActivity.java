@@ -40,7 +40,7 @@ public class EditActivity extends AppCompatActivity {
                     //return to main screen
                     finish();
                 } else {
-                    Toast.makeText(EditActivity.this, "Item updated successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EditActivity.this, "Please enter at least 1 character.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
